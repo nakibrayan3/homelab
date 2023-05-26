@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-VOLUME /qBittorrent/config
-VOLUME /qBittorrent/downloads
+VOLUME /qBittorrent
 
 RUN apk add --no-cache qbittorrent-nox
 
