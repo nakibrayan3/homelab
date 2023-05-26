@@ -1,0 +1,10 @@
+FROM alpine:latest
+
+VOLUME /qBittorrent/config
+VOLUME /qBittorrent/downloads
+
+RUN apk add --no-cache qbittorrent-nox
+
+EXPOSE 8080
+
+CMD qbittorrent-nox --webui-port=8080 --profile=/
