@@ -1,0 +1,11 @@
+version: "3"
+services:
+  qBittorrent:
+    image: docker.io/nakibrayan/qbittorrent-nox:latest
+    container_name: qbittorrent-nox
+    ports:
+      - 8080:8080
+    volumes:
+      - ~/.config/qBittorrent:/config
+      - ~/Downloads:/downloads
+    restart: unless-stopped
